@@ -1,7 +1,8 @@
-// Configuración de Supabase (Reemplazar con tus credenciales de proyecto)
-const SUPABASE_URL = "https://TU_PROYECTO.supabase.co";
-const SUPABASE_ANON_KEY = "TU_ANON_KEY";
+// Configuración de Supabase (Reemplaza con tus datos reales)
+const SUPABASE_URL = "https://cpobjhcsvwosolvxwzce.supabase.co/rest/v1/";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNwb2JqaGNzdndvc29sdnh3emNlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTIwNjc4MTksImV4cCI6MjEwNzY0MzgxOX0.OhhdMA0g2naBlO5rRS6MBC-MmoLaPE5sL-kFMT1ls1Q";
 
+// Inicialización única del cliente de Supabase
 const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 const DOMINIO_PERMITIDO = "@miinstitucion.edu.py";
@@ -23,7 +24,7 @@ form.addEventListener("submit", async (e) => {
     const email = emailInput.value.trim();
     const password = passwordInput.value;
 
-    // 1. Validación en el Frontend (Capación de interfaz)
+    // 1. Validación en el Frontend
     if (!email.endsWith(DOMINIO_PERMITIDO)) {
         showMessage(`Acceso denegado: El correo debe ser del dominio ${DOMINIO_PERMITIDO}`, "error");
         return;
@@ -37,9 +38,9 @@ form.addEventListener("submit", async (e) => {
 
     if (error) {
         console.error("Error backend:", error.message);
-        showMessage(`Error en el servidor: ${error.message}`, "error");
+        showMessage(`Error: ${error.message}`, "error");
     } else {
-        showMessage(`¡Registro exitoso! Se ha enviado una confirmación a: ${email}`, "success");
+        showMessage(`¡Registro exitoso! Revisa tu correo de confirmación: ${email}`, "success");
         form.reset();
     }
 });
