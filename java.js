@@ -1,7 +1,8 @@
 // Configuración de Supabase (Reemplaza con tus datos reales)
-const SUPABASE_URL = "https://cpobjhcsvwosolvxwzce.supabase.co/rest/v1/";
-const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNwb2JqaGNzdndvc29sdnh3emNlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTIwNjc4MTksImV4cCI6MjEwNzY0MzgxOX0.OhhdMA0g2naBlO5rRS6MBC-MmoLaPE5sL-kFMT1ls1Q";
 
+
+const SUPABASE_URL = "https://cpobjhcsvwosolvxwzce.supabase.co";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNwb2JqaGNzdndvc29sdnh3emNlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTIwNjc4MTksImV4cCI6MjEwNzY0MzgxOX0.OhhdMA0g2naBlO5rRS6MBC-MmoLaPE5sL-kFMT1ls1Q";
 // Inicialización única del cliente de Supabase
 const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
